@@ -25,6 +25,16 @@ public class Book {
     @Column(name = "PRICE")
     private BigDecimal price;
 
+    public Book() {
+    }
+
+    public Book(String title, Date date, int pageCount, BigDecimal price) {
+        this.title = title;
+        this.date = date;
+        this.pageCount = pageCount;
+        this.price = price;
+    }
+
     public Long getId() {
         return id;
     }
