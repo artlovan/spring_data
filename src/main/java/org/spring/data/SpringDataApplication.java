@@ -19,7 +19,7 @@ public class SpringDataApplication {
 		BookRepository repository = context.getBean(BookRepository.class);
 
 		Book book = new Book();
-		book.setDate(new Date());
+		book.setPublishDate(new Date());
 		book.setPrice(new BigDecimal(9.99));
 		book.setTitle("Book Title");
 		book.setPageCount(200);
@@ -44,6 +44,7 @@ public class SpringDataApplication {
 		books = repository.findAll();
 		printAllBooks(books);
 
+
 	}
 
 	private static void printAllBooks(List<Book> books) {
@@ -57,7 +58,7 @@ public class SpringDataApplication {
 	private static void printBook(Book b) {
 			System.out.println("-- Book --");
 			System.out.println(b.getId());
-			System.out.println(b.getDate());
+			System.out.println(b.getPublishDate());
 			System.out.println(b.getPrice());
 			System.out.println(b.getTitle());
 			System.out.println(b.getPageCount());

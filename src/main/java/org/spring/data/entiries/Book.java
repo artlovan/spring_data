@@ -17,7 +17,7 @@ public class Book {
     private String title;
 
     @Column(name = "DATE")
-    private Date date;
+    private Date publishDate;
 
     @Column(name = "PAGE_COUNT")
     private int pageCount;
@@ -30,7 +30,7 @@ public class Book {
 
     public Book(String title, Date date, int pageCount, BigDecimal price) {
         this.title = title;
-        this.date = date;
+        this.publishDate = date;
         this.pageCount = pageCount;
         this.price = price;
     }
@@ -51,12 +51,12 @@ public class Book {
         this.title = title;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getPublishDate() {
+        return publishDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setPublishDate(Date publishDate) {
+        this.publishDate = publishDate;
     }
 
     public int getPageCount() {
